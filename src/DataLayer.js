@@ -13,4 +13,4 @@ import{createContext,
          </DataLayerContext.Provider>
     );
 
-   export const useDatLayerValue = ()=> useContext(DataLayerContext);
+   export const useDataLayerValue = ()=> useContext(DataLayerContext);
