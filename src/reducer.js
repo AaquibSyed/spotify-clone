@@ -1,5 +1,7 @@
 export const initialState = {
     user:null,
+    //remove after development
+    token:'BQDIHiD_nEJyfBV5hkNwoTVHnBjoDTyp1JU9fGq33kjVnj_IL-Iju7vBYzoM7aco5famzoj6Y9DFeQovbhlp6p_kBoRJSwoH2AGoqLO3lmMYnDl5MAjqfRHCkCzVw26-ocv7574cFeJ5TtI_6heFwrejO7KkmIebvA5QIS3nvfFXnOMT',
     playLists : [],
     playing:false,
     item:null
@@ -15,6 +17,11 @@ const reducer = (state,action)=>{
                ...state,
                user:action.user
            }
+        case 'SET_TOKEN':
+            return{
+                ...state,
+                token:action.token
+            }   
            default:
                return state;
    }
