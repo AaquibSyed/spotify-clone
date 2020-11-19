@@ -17,7 +17,6 @@ function App() {
        const _token = hash.access_token;
 
        if(_token){    
-
           dispatch({
             type:"SET_TOKEN",
             token:_token,
@@ -33,15 +32,17 @@ function App() {
                     user:user
                  })
          })
-        }
-        spotify.getUserPlaylists()
+
+         spotify.getUserPlaylists()
         .then((playlists)=>{
           dispatch({
             type:'SET_PLAYLISTS',
             playlists:playlists
           })
         })
-
+ 
+        }
+       
  }, [])
 
   return (
