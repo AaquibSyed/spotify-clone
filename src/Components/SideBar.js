@@ -16,14 +16,14 @@ function SideBar() {
           `2019/12/spotify2019-830x350.jpg`}
            alt="spotify"
           className="sidebar__logo"/>
-          <SideBarOption title='Home' Icon={HomeIcon}/>
-          <SideBarOption title='Search' Icon={SearchIcon} />
-          <SideBarOption title='Your Library' Icon={LibraryMusicIcon}/>
+          <SideBarOption title='Home'key='home' Icon={HomeIcon}/>
+          <SideBarOption title='Search' key='search' Icon={SearchIcon} />
+          <SideBarOption title='Your Library' key='library' Icon={LibraryMusicIcon}/>
           <br/>
           <strong className='sidebar__title'>PLAYLISTS</strong>
           <hr/>
           {playlists?.items?.map((item)=>(
-            <SideBarOption title={item.name}/>
+            <SideBarOption key={item.name} title={item.name}/>
           ))}
 
          </div>
