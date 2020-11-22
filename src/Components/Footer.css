@@ -8,6 +8,11 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 600px) {
+  .footer {
+    padding: 0;
+  }
+}
 
 .footer__center {
   display: flex;

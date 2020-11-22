@@ -1,11 +1,12 @@
 .body {
-  flex: 0.8;
+  flex: 0.9;
   background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
   height: 100vh;
   color: white;
   padding: 30px;
   overflow-y: overlay;
 }
+
 .body::-webkit-scrollbar {
   display: none;
 }
@@ -51,4 +52,21 @@
 }
 .body__songs {
   margin: 20px -30px;
+}
+
+@media (max-width: 600px) {
+  .body__info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .body__info > img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .body__infoText > h2 {
+    display: none;
+  }
 }

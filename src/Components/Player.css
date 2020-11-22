@@ -1,3 +1,17 @@
 .player__body {
   display: flex;
 }
+
+@media (max-width: 600px) {
+  .player__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar__logo {
+    object-fit: contain;
+    height: 70px;
+    width: 100%;
+    padding: 10px;
+  }
+}

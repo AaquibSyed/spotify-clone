@@ -21,17 +21,17 @@ function Body({spotify}) {
                   <p>{discover_weekly?.description}</p>
               </div>
             </div>
-            <div className="body__songs">
 
+            <div className="body__songs">
                 <div className="body__icons">
                     <PlayCircleFilledIcon className='body__shuffle'/>
                     <FavoriteIcon fontSize = "large" />
                     <MoreHorizIcon/>
                 </div>
+                {/* list of songs */}
                 {discover_weekly?.tracks.items.map((item)=>(
-                    <SongRow track={item.track}/>
+                    <SongRow key={item.track.name} track={item.track}/>
                 ))}
-               {/* list of songs */}
            </div>
         </div>
         

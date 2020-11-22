@@ -28,3 +28,21 @@
 .header__right > h4 {
   margin-left: 10px;
 }
+
+@media (max-width: 600px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .header__left {
+    flex: 0.7;
+    padding: 3px;
+    min-width: 90px;
+  }
+
+  .header__right > h4 {
+    font-weight: 400;
+  }
+}

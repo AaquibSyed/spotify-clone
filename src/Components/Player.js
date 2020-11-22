@@ -10,8 +10,8 @@ function Player({spotify}) {
     return (
         <div className='player'>
             <div className="player__body">              
-               <SideBar/>              
-               <Body spotify={spotify}/>
+               <SideBar className='player__sidebar'/>              
+               <Body spotify={spotify} className='player__BodyComp'/>
             </div>
            
             <Footer/>
