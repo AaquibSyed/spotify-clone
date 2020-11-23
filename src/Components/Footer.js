@@ -8,20 +8,24 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 import {Grid, Slider} from '@material-ui/core';
 import VolumeDownIcon from '@material-ui/icons/VolumeDown';
+import { useDataLayerValue } from './../DataLayer';
 
 
 
 
 function Footer() {
+    const[{playing_track},dispatch] = useDataLayerValue();
     return (
         <div className='footer'>
             <div className="footer__left">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Usher-yeah.jpg"
+                {playing_track && <img src={playing_track?.album.images[0].url}
                      alt="album"
-                     className='footer__image'/>
+                    className='footer__image'/>  }           
                 <div className="footer__songInfo">
-                     <h4>YEAH!</h4>
-                     <p>Usher</p>                    
+                {playing_track && <> <h6>{playing_track.name} </h6>
+                                 <p>{playing_track.artists[0].name}</p>
+                                 </> }
+                                       
                 </div>
             </div>
 

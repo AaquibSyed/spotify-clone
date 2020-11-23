@@ -7,7 +7,8 @@ export const initialState = {
     playing:false,
     current_playlist :null,
     item:null,
-    discover_weekly:null
+    discover_weekly:null,
+    playing_track:null
 }
 
 const reducer = (state,action)=>{
@@ -40,8 +41,13 @@ const reducer = (state,action)=>{
                 ...state,
                 current_playlist:action.current_playlist
             }     
-           default:
-               return state;
+         case 'SET_PLAYING_TRACK':
+             return{
+                 ...state,
+                 playing_track:action.playing_track
+             }   
+        default:
+             return state;
    }
 }
 
