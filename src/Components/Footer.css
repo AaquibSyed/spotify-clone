@@ -39,7 +39,7 @@
 }
 
 .footer__right *.MuiSlider-root {
-  color: rgb(15, 184, 15);
+  color: rgb(7, 0, 71);
 }
 
 .footer__icon:hover,
@@ -49,7 +49,7 @@
 }
 
 .footer__green {
-  color: rgb(15, 184, 15);
+  color: rgb(7, 0, 71);
 }
 
 .footer__image {
@@ -72,5 +72,5 @@
 .footer__image:hover {
   transition: 200ms ease-in-out;
   transform: scale(1.4);
-  box-shadow: 0 0 2px 2px rgba(91, 184, 15, 0.8);
+  box-shadow: 2px 2px 3px 3px rgba(1, 1, 31, 0.8);
 }
